@@ -10,7 +10,7 @@ search_bar.send_keys("getting started with python")
 search_bar.send_keys(Keys.RETURN)
 mm
 print('The current url is: ')
-kk
+
 print(driver.current_url)
 print(driver.window_handles)
 # driver.close()
