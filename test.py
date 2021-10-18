@@ -1,4 +1,4 @@
-#Simple assignment
+# Simple assignment
 
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -10,22 +10,22 @@ driver = Firefox()
 Firefox()
 driver.get("https://seleniumhq.github.io")
 
-    # Setup wait for later
+# Setup wait for later
 wait = WebDriverWait(driver, 10)
 
-    # Store the ID of the original window
+# Store the ID of the original window
 original_window = driver.current_window_handle
 
-    # Check we don't have other windows open already
+# Check we don't have other windows open already
 assert len(driver.window_handles) == 1
 
-    # Click the link which opens in a new window
+# Click the link which opens in a new window
 driver.find_element(By.LINK_TEXT, "new window").click()
 
-    # Wait for the new window or tab
+# Wait for the new window or tab
 wait.until(EC.number_of_windows_to_be(2))
 
-    # Loop through until we find a new window handle
+# Loop through until we find a new window handle
 for window_handle in driver.window_handles:
     if window_handle != original_window:
         \fff
@@ -34,4 +34,3 @@ for window_handle in driver.window_handles:
 
     # Wait for the new tab to finish loading content
 wait.until(EC.title_is("SeleniumHQ Browser Automation"))
-  

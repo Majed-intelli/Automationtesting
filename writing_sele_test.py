@@ -3,10 +3,12 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
+
 class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
+        # hello from huz
 
     # def test_search_in_python_org(self):
     #     driver = self.driver
@@ -37,7 +39,9 @@ class PythonOrgSearch(unittest.TestCase):
 
     def tearDown(self):
         time.sleep(10)
+        time.sleep(2)
         self.driver.close()
+
 
 if __name__ == "__main__":
     unittest.main()
