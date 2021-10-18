@@ -28,6 +28,7 @@ wait.until(EC.number_of_windows_to_be(2))
     # Loop through until we find a new window handle
 for window_handle in driver.window_handles:
     if window_handle != original_window:
+        \fff
         driver.switch_to.window(window_handle)
         break
 
