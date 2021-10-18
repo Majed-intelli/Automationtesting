@@ -5,6 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver import Firefox
+from datetime import datetime as dt
+from dateutil.relativedelta import relativedelta
 
 driver = Firefox()
 Firefox()
@@ -28,7 +30,7 @@ wait.until(EC.number_of_windows_to_be(2))
 # Loop through until we find a new window handle
 for window_handle in driver.window_handles:
     if window_handle != original_window:
-        \fff
+
         driver.switch_to.window(window_handle)
         break
 
