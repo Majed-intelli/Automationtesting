@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver import Firefox
+import time
 
 driver = Firefox()
 Firefox()
@@ -34,4 +35,3 @@ for window_handle in driver.window_handles:
 
     # Wait for the new tab to finish loading content
 wait.until(EC.title_is("SeleniumHQ Browser Automation"))
-  
