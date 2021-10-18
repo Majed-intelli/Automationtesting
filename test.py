@@ -15,7 +15,7 @@ wait = WebDriverWait(driver, 10)
 
     # Store the ID of the original window
 original_window = driver.current_window_handle
-
+lohjgfpiwrjge
     # Check we don't have other windows open already
 assert len(driver.window_handles) == 1
 
